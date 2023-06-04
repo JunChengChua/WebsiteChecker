@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 import javax.lang.model.element.Element;
+
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 import org.jsoup.Jsoup;
@@ -23,7 +25,9 @@ public class Test {
 	}
 	public static void main(String[] args) throws IOException
 	{
-		String url = "C:\\Users\\waddl\\IdeaProjects\\Test\\src\\Test.html";
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please input the link of the site you'd like to check / save");
+		String url = scan.nextLine();
 		checkText(url);
 		System.out.println(justText);
 		if (checkDifference())
